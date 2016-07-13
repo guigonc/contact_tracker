@@ -46,3 +46,4 @@ end
 
 gem 'rails_12factor'
 gem 'puma'
+gem 'rack-cors'
