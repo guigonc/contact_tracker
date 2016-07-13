@@ -42,8 +42,17 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  #Changing the test library
+  gem 'rspec'
+  gem 'rspec-rails'
 end
 
+#Gem for heroku integration
 gem 'rails_12factor'
+
+#Puma server
 gem 'puma'
+
+#Gem for allowing CORS
 gem 'rack-cors'

@@ -14,7 +14,9 @@ development: &default
 
 test:
   <<: *default
-  database: myapp_test
+  database: test
+  username: postgres
+  password:
 
 production:
   <<: *default
