@@ -11,6 +11,22 @@
   <dt><strong><%= model_class.human_attribute_name(:phone) %>:</strong></dt>
   <dd><%= @contact.phone %></dd>
 </dl>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Page</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contact.page_views.order('created_at DESC').each do |page_view| %>
+      <tr>
+        <td><%= page_view.path %></td>
+        <td><%= page_view.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               contacts_path, :class => 'btn btn-default'  %>
