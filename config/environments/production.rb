@@ -76,4 +76,11 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.middleware.insert_before 0, "Rack::Cors" do
+    allow do
+      origins 'guigonc.github.io'
+      resource '*', :headers => :any, :methods => :any
+    end
+  end
 end

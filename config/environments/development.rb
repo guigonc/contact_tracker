@@ -43,7 +43,6 @@ Rails.application.configure do
     end
   end
 
-
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
